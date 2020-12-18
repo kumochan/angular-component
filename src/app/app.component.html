@@ -1,9 +1,10 @@
-<app-navbar></app-navbar>
+<app-navbar item='{{article.url}}' (newItemEvent)="addItem($event)"></app-navbar>
 <app-posts></app-posts>
 <h2>
-
     Today's article</h2>
 <hr>
+
+<span>{{article}}</span>
 
 <div>
     <a href="{{article.url}}" target="_blank">{{article.title}}</a>

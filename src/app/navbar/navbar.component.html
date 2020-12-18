@@ -8,3 +8,8 @@
     </nav>
     <a class="btn btn-outline-primary" href="#">Sign up</a>
 </header>
+
+<h1>{{item}}</h1>
+
+<label>Add an item: <input #newItem></label>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>

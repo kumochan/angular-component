@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component , Input} from '@angular/core';
 
 import { Article } from '../models/Article';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,9 +10,12 @@ import { Article } from '../models/Article';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
   title = 'component-example';
 
   article = {
+    id: '1',
     title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await',
     url: 'https://medium.freecodecamp.org/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40'
   };
@@ -46,16 +51,31 @@ export class AppComponent {
   ];
 
   public myListArticles: Article[] = [
-    { title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await', url: 'https://medium.freecodecamp.org/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40' },
-    { title: 'Game of Life', url: 'https://thefullsnack.com/posts/game-of-life.html' },
-    { title: 'Game', url: 'Diablo' },
+    { id: 1, title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await', url: 'https://medium.freecodecamp.org/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40' },
+    { id: 2, title: 'Game of Life', url: 'https://thefullsnack.com/posts/game-of-life.html' },
+    { id: 3, title: 'Game', url: 'Diablo' },
   ];
 
   addArticle()  {
     this.myListArticles.push({
+      'id': 1,
       'title': this.article.title,
       'url': this.article.url
     })
+  }
+  
+  items = ['item1', 'item2', 'item3', 'item4'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+    console.log(this.items);
+  }
+
+  
+
+
+  detailArticle(){
+
   }
 
 }
