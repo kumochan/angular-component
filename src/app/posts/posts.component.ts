@@ -12,4 +12,6 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  post_component = 'hello component post';
+
 }
