@@ -8,13 +8,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 // import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { PostsComponent } from './posts/posts.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LikesComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
